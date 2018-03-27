@@ -1,0 +1,16 @@
+﻿  Source.cpp
+f:\#github\vs\pp_po_lab_zespolona\pp_po_lab_zespolona\pp_po_lab_zespolona\source.cpp(12): error C2059: syntax error: '{'
+f:\#github\vs\pp_po_lab_zespolona\pp_po_lab_zespolona\pp_po_lab_zespolona\source.cpp(12): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+f:\#github\vs\pp_po_lab_zespolona\pp_po_lab_zespolona\pp_po_lab_zespolona\source.cpp(26): error C2143: syntax error: missing ';' before '}'
+f:\#github\vs\pp_po_lab_zespolona\pp_po_lab_zespolona\pp_po_lab_zespolona\source.cpp(30): error C2275: 'zespolona': illegal use of this type as an expression
+f:\#github\vs\pp_po_lab_zespolona\pp_po_lab_zespolona\pp_po_lab_zespolona\source.cpp(30): error C2228: left of '.a' must have class/struct/union
+f:\#github\vs\pp_po_lab_zespolona\pp_po_lab_zespolona\pp_po_lab_zespolona\source.cpp(30): error C2228: left of '.b' must have class/struct/union
+f:\#github\vs\pp_po_lab_zespolona\pp_po_lab_zespolona\pp_po_lab_zespolona\source.cpp(71): error C2512: 'zespolona': no appropriate default constructor available
+  f:\#github\vs\pp_po_lab_zespolona\pp_po_lab_zespolona\pp_po_lab_zespolona\source.cpp(6): note: see declaration of 'zespolona'
+f:\#github\vs\pp_po_lab_zespolona\pp_po_lab_zespolona\pp_po_lab_zespolona\source.cpp(74): error C2248: 'zespolona::a': cannot access private member declared in class 'zespolona'
+  f:\#github\vs\pp_po_lab_zespolona\pp_po_lab_zespolona\pp_po_lab_zespolona\source.cpp(10): note: see declaration of 'zespolona::a'
+  f:\#github\vs\pp_po_lab_zespolona\pp_po_lab_zespolona\pp_po_lab_zespolona\source.cpp(6): note: see declaration of 'zespolona'
+f:\#github\vs\pp_po_lab_zespolona\pp_po_lab_zespolona\pp_po_lab_zespolona\source.cpp(77): error C2248: 'zespolona::b': cannot access private member declared in class 'zespolona'
+  f:\#github\vs\pp_po_lab_zespolona\pp_po_lab_zespolona\pp_po_lab_zespolona\source.cpp(10): note: see declaration of 'zespolona::b'
+  f:\#github\vs\pp_po_lab_zespolona\pp_po_lab_zespolona\pp_po_lab_zespolona\source.cpp(6): note: see declaration of 'zespolona'
+f:\#github\vs\pp_po_lab_zespolona\pp_po_lab_zespolona\pp_po_lab_zespolona\source.cpp(79): error C2059: syntax error: '.'

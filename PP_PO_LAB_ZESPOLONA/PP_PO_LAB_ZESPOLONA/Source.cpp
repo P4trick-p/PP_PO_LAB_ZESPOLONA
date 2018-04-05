@@ -34,37 +34,39 @@ public:
 
 	void modul()
 	{
-		int i;
-		i = sqrt(Rm*Rm + Im * Im);
+		double i;
+		i = sqrt((Rm * Rm) + (Im * Im));
 		cout << "|z| = " << i << endl;
-		//return sqrt(Rm*Rm + Im * Im);
 	};
 
 	void sprzezenie()
 	{
-		int Rm_sp;
-		int Im_sp;
 		cout << "Sprzezenie: z = ";
-		if ((Rm > 0 && Im > 0) || (Rm < 0 && Im < 0) || (Rm < 0 && Im>0) || (Rm > 0 && Im < 0)) {
-
-		}
-		else {
-			if (Rm == 0 && Im > 0) {
+		if (Im > 0) {
+			if (Rm != 0) {
+				cout << Rm << "-" << Im << "i";
+			}
+			if (Rm == 0) {
 				cout << "-" << Im << "i";
-				Im_sp = -Im;
-			}
-			if (Rm == 0 && Im < 0) {
-				Im_sp = -Im;
-				cout << Im_sp << "i";
-			}
-			if (Rm > 0 && Im == 0) {
-				cout << "-" << Rm;
-				Rm_sp = -Rm;
-			}
-			if (Rm < 0 && Im == 0) {
-				Rm_sp = -Rm;
 			}
 		}
+		if (Im < 0) {
+			if (Rm != 0) {
+				cout << Rm << "+" << -Im << "i";
+			}
+			if (Rm == 0) {
+				cout << -Im << "i";
+			}
+		}
+		if (Im == 0) {
+			if (Rm != 0) {
+				cout << Rm;
+			}
+			if (Rm ==0) {
+				cout << "0";
+			}
+		}
+		cout << endl;
 	};
 
 	double dodawanie(Zespolona z)
@@ -76,9 +78,6 @@ public:
 
 	double odejmowanie(Zespolona z)
 	{
-		/*Rm = Rm - z.Rm;
-		Im = Im - z.Im;
-		return Rm, Im;*/
 		z.Rm -= Rm;
 		z.Im -= Im;
 		return z.Rm, z.Im;
@@ -91,17 +90,30 @@ public:
 		return z.Rm, z.Im;
 	};
 
-	void wyœwietlanie()
+	void wyswietlanie()
 	{
 		cout << "z = ";
-		if (Im > 0)
-			cout << Rm << " + " << Im << "i" << endl;
-		if (Rm == 0 && Im == 0)
-			cout << "0" << endl;
-		if (Rm == 0 && Im != 0)
-			cout << Im << "i" << endl;
-		if (Rm != 0 && Im == 0)
-			cout << Rm << endl;
+		if (Rm > 0 || Rm < 0 ) {
+			if (Im > 0) {
+				cout << Rm << "+" << Im << "i";
+			}
+			if (Im < 0) {
+				cout << Rm << Im << "i";
+			}
+			if (Im == 0) {
+				cout << Rm;
+			}
+		}
+		if (Rm == 0) {
+			if (Im > 0 || Im < 0) {
+				cout << Im << "i";
+			}
+			if (Im == 0) {
+				cout << "0";
+			}
+			
+		}
+		cout << endl;
 		system("pause");
 	};
 
@@ -112,7 +124,7 @@ int main()
 	cout << "++ Kalkulator liczb zespolonych ++" << endl;
 	cout << "1. Wlasne" << endl << "2. Losowe" << endl;
 
-	cout << "Wybierz opcjê: ";
+	cout << "Wybierz opcje: ";
 	cin >> op;
 	system("cls");
 	switch (op) {
@@ -128,7 +140,9 @@ int main()
 		system("cls");
 		{
 			Zespolona z1(R, I);
-			z1.wyœwietlanie();
+			z1.wyswietlanie();
+			z1.sprzezenie();
+			z1.modul();
 		}
 
 		break;
@@ -138,8 +152,8 @@ int main()
 		cin >> zakres;
 		{
 			Zespolona z2(zakres);
+			z2.wyswietlanie();
 			z2.sprzezenie();
-			z2.wyœwietlanie();
 			z2.modul();
 		}
 		break;
@@ -149,14 +163,14 @@ int main()
 		main();
 		break;
 	}
-	menu();
-
+	//	menu();
 	system("pause");
 	return 0;
 }
 
+/*
 void menu() {
-	int menu;
+	int men;
 	cout << "++ MENU ++" << endl;
 	cout << "1.Modul" << endl;
 	cout << "2.Sprzezenie" << endl;
@@ -165,8 +179,8 @@ void menu() {
 	cout << "5.Mnozenie" << endl;
 	cout << "6.Wyswietlanie" << endl;
 	cout << "7.Wyjœcie" << endl;
-	cin >> menu;
-	switch (menu) {
+	cin >> men;
+	switch (men) {
 	case 1:
 	{
 		if (op == 1) { z1.modul(); }
@@ -209,7 +223,10 @@ void menu() {
 		exit(0);
 	}
 	default:
-		cout << "Nie ma takiej opcji!";
-		system("cls");
-		menu();
+	{cout << "Nie ma takiej opcji!";
+	system("cls");
+	menu();
+	break;
 	}
+	}
+	*/

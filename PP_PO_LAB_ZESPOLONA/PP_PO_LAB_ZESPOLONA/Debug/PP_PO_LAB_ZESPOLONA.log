@@ -1,3 +1,4 @@
 ﻿  Source.cpp
 f:\#github\vs\pp_po_lab_zespolona\pp_po_lab_zespolona\pp_po_lab_zespolona\source.cpp(26): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  PP_PO_LAB_ZESPOLONA.vcxproj -> F:\#GitHub\VS\PP_PO_LAB_ZESPOLONA\PP_PO_LAB_ZESPOLONA\Debug\PP_PO_LAB_ZESPOLONA.exe
+f:\#github\vs\pp_po_lab_zespolona\pp_po_lab_zespolona\pp_po_lab_zespolona\source.cpp(193): error C2664: 'double Zespolona::dodawanie(double,double)': cannot convert argument 1 from 'Zespolona' to 'double'
+  f:\#github\vs\pp_po_lab_zespolona\pp_po_lab_zespolona\pp_po_lab_zespolona\source.cpp(193): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
